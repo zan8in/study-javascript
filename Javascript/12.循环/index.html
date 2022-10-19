@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>循环</h1>
+    <h3>For 循环</h3>
+    <script>
+        var cars = ["Volvo", "Benz", "BMW"]
+    </script>
+    <xmp>
+        for (语句 1; 语句 2; 语句 3)
+        {
+            被执行的代码块
+        }
+        语句 1 （代码块）开始前执行
+        语句 2 定义运行循环（代码块）的条件
+        语句 3 在循环（代码块）已被执行之后执行
+    </xmp>
+
+    <xmp>
+        for (var i=0,len=cars.length; i<len; i++)
+        { 
+            document.write(cars[i] + "<br>");
+        }
+    </xmp>
+    <script>
+        for (var i=0,len=cars.length; i<len; i++)
+        { 
+            document.write(cars[i] + "<br>");
+        }
+    </script>
+
+    <xmp>
+        var i=0, len=cars.length;
+        for (; i<len; ) {
+            document.write(cars[i] + "<br>");
+            i++;
+        }
+    </xmp>
+    <script>
+        
+        var i=0; len=cars.length;
+        for (; i<len; ) {
+            document.write(cars[i] + "<br>");
+            i++;
+        }
+    </script>
+
+    <h3>FOR/IN 循环</h3>
+    <xmp>
+        var person={fname:"Bill",lname:"Gates",age:56}; 
+ 
+        for (x in person)  // x 为属性名
+        {
+            txt=txt + person[x];
+        } 
+    </xmp>
+    <script>
+        var person={fname:"Bill",lname:"Gates",age:56}; 
+        for (x in person)  // x 为属性名
+        {
+            txt = "";
+            txt = txt + person[x];
+            document.write(txt + "<br>");
+        }
+    </script>
+    <h3>While 循环</h3>
+    <xmp>
+        while (条件)
+        {
+            需要执行的代码
+        }
+    </xmp>
+    <script>
+        var i = 0;
+        while (i<5)
+        {
+            x = "";
+            x=x + "The number is " + i + "<br>";
+            i++;
+            document.write(x + "<br>");
+        }
+    </script>
+    <h3>do/while 循环</h3>
+    <xmp>
+        do
+        {
+            需要执行的代码
+        }
+        while (条件);
+    </xmp>
+    <script>
+        do
+        {
+            x = "";
+            x=x + "The number is " + i + "<br>";
+            i++;
+            document.write(x + "<br>");
+        }
+        while (i<5);
+    </script>
+    <h3>比较 for 和 while</h3>
+    <xmp>
+        cars=["BMW","Volvo","Saab","Ford"];
+        var i=0;
+        for (;cars[i];)
+        {
+            document.write(cars[i] + "<br>");
+            i++;
+        }
+    </xmp>
+    <script>
+        cars=["BMW","Volvo","Saab","Ford"];
+        var i=0;
+        for (;cars[i];)
+        {
+            document.write(cars[i] + "<br>");
+            i++;
+        }
+    </script>
+
+    <h3>break 语句可用于跳出任何 JavaScript 代码块</h3>
+    <xmp>
+        cars=["BMW","Volvo","Saab","Ford"];
+        list: 
+        {
+            document.write(cars[0] + "<br>"); 
+            document.write(cars[1] + "<br>"); 
+            document.write(cars[2] + "<br>"); 
+            break list;
+            document.write(cars[3] + "<br>"); 
+            document.write(cars[4] + "<br>"); 
+            document.write(cars[5] + "<br>"); 
+        }
+    </xmp>
+    <script>
+        cars=["BMW","Volvo","Saab","Ford"];
+        list:{
+            document.write(cars[0] + "<br>"); 
+            document.write(cars[1] + "<br>"); 
+            document.write(cars[2] + "<br>"); 
+            break list;
+            document.write(cars[3] + "<br>"); 
+            document.write(cars[4] + "<br>"); 
+            document.write(cars[5] + "<br>"); 
+        }
+    </script>
+
+    <h3>null 与 undefined 关系</h3>
+    <xmp>
+        typeof undefined             // undefined
+        typeof null                  // object
+        null === undefined           // false
+        null == undefined            // true
+    </xmp>
+    <script>
+        console.log(typeof undefined);
+        console.log(typeof null);
+        console.log(null === undefined);
+        console.log(null == undefined);
+    </script>
+</body>
+</html>

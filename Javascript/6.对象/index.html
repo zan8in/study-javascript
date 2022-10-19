@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <H1>JavaScript 对象</H1>
+    <h3>真实生活中，一辆汽车是一个对象。
+        对象有它的属性，如重量和颜色等，方法有启动停止等:</h3>
+    
+    <script>
+        // 对象定义方法1
+        var car = new Object;
+        car.name = "BMW";
+        car.model = "x7";
+        car.color = "black";
+        console.log(car);
+
+        // 对象定义方法2
+        var car2 = {name:"Fiat", model:500, color:"white"};
+        console.log(car2);
+
+        // 对象定义方法3
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 20,
+            eyeColor: "blue",
+            fullName: function() { // 创建对象方法
+                return person.firstName + "·" + person.lastName;
+            }
+        }
+        console.log(person);
+
+        // 访问对象属性1
+        console.log("firstName: ", person.firstName);
+        // 访问对象属性2
+        console.log("lastName: ", person["lastName"]);
+        
+        // 对象方法
+        var name = person.fullName();
+        console.log("fullName: ", name);
+
+    </script>
+</body>
+</html>

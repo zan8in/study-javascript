@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript 正则表达式</h1>
+    <p>
+        正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。
+        <br>搜索模式可用于文本搜索和文本替换。
+    </p>
+    <h3>语法</h3>
+    <p>
+        /正则表达式/修饰符（可选）
+    </p>
+    <xmp>
+        var reg = /runoob/i
+        /runoob/i 是正则表达式
+        runoob 是正则表达式主体
+        i 是一个修饰符（搜索不区分大小写）
+    </xmp>
+    <h3>search() 方法使用正则表达式</h3>
+    <p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</p>
+    <xmp>
+        var str = "Visit Runoob!";
+        var n = str.search(/runoob/i);  // 6
+    </xmp>
+    <script>
+        var str = "Visit Runoob!";
+        var n = str.search(/runoob/i);
+        document.writeln(n);
+
+        var n1 = str.search(/runoob/);
+        document.writeln(n1);
+    </script>
+    <h3>replace() 方法使用正则表达式</h3>
+    <p>replace() 方法用于在字符串中用一些字符串替换另一些字符串，或替换一个与正则表达式匹配的子串。 </p>
+    <xmp>
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace(/microsoft/i, "Runoob");
+    </xmp>
+    <button onclick="myFunction()">点我</button>
+    <p id="demo">Visit Microsoft!</p>
+    <script>
+        var myFunction = function() {
+            var str = document.getElementById("demo").innerHTML;
+            var txt = str.replace(/microsoft/i, "Runoob");
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+    <h3>修饰符 g </h3>
+    <p>执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。</p>
+    <button onclick="myFunction2()">点我</button>
+    <div id="demo2"></div>
+    <script>
+        document.getElementById("demo2").innerHTML = "\nVisit Microsoft!\nVisit Microsoft!!"
+        var myFunction2 = function() {
+            var str = document.getElementById("demo2").innerHTML;
+            var txt = str.replace(/s/g, "SSS");
+            document.getElementById("demo2").innerHTML = txt;
+        }
+    </script>
+    <h3>修饰符 m</h3>
+    <p>	执行多行匹配。</p>
+    <button onclick="myFunction3()">点我</button>
+    <div id="demo3"></div>
+    <script>
+        document.getElementById("demo3").innerHTML = "\nVisit Microsoft!\nVisit Microsoft!!"
+        var myFunction3 = function() {
+            var str = document.getElementById("demo3").innerHTML;
+            var txt = str.replace(/s/m, "SSS");
+            document.getElementById("demo3").innerHTML = txt;
+        }
+    </script>
+    <h3>[abc] 查找方括号之间的任何字符。</h3>
+    <button onclick="myFunction4()">点我</button>
+    <p id="demo4">Visit Microsoft!</p>
+    <script>
+        var myFunction4 = function() {
+            var str = document.getElementById("demo4").innerHTML;
+            var txt = str.replace(/[si]/gi, "AAA");
+            document.getElementById("demo4").innerHTML = txt;
+        }
+    </script>
+    <h3>[0-9] 查找任何从 0 至 9 的数字。</h3>
+    <button onclick="myFunction5()">点我</button>
+    <p id="demo5">Visit Microsoft 123456789!</p>
+    <script>
+        var myFunction5 = function() {
+            var str = document.getElementById("demo5").innerHTML;
+            var txt = str.replace(/[1-5]/gi, "A");
+            document.getElementById("demo5").innerHTML = txt;
+        }
+    </script>
+    <h3>(x|y) 查找任何以 | 分隔的选项。</h3>
+    <button onclick="myFunction6()">点我</button>
+    <p id="demo6">Visit Microsoft!</p>
+    <script>
+        var myFunction6 = function() {
+            var str = document.getElementById("demo6").innerHTML;
+            var txt = str.replace(/[i|t]/gi, "A");
+            document.getElementById("demo6").innerHTML = txt;
+        }
+    </script>
+    <h3>\d 查找数字。</h3>
+    <button onclick="myFunction7()">点我</button>
+    <p id="demo7">Visit Microsoft 123456789!</p>
+    <script>
+        var myFunction7 = function() {
+            var str = document.getElementById("demo7").innerHTML;
+            var txt = str.replace(/[\d]/gi, "A");
+            document.getElementById("demo7").innerHTML = txt;
+        }
+    </script>
+    <h3>\s 查找空白字符。</h3>
+    <button onclick="myFunction8()">点我</button>
+    <p id="demo8">Visit Microsoft 123456789!</p>
+    <script>
+        var myFunction8 = function() {
+            var str = document.getElementById("demo8").innerHTML;
+            var txt = str.replace(/[\s]/gi, "A");
+            document.getElementById("demo8").innerHTML = txt;
+        }
+    </script>
+    <h3>\b 匹配单词边界。？？？</h3>
+    <button onclick="myFunction9()">点我</button>
+    <p id="demo9">Visit Microsoft 123456789!</p>
+    <script>
+        var myFunction9 = function() {
+            var str = document.getElementById("demo9").innerHTML;
+            var txt = str.replace(/[Mi]/gi, "A");
+            document.getElementById("demo9").innerHTML = txt;
+        }
+    </script>
+    <h2>使用 RegExp 对象</h2>
+    <h3>使用 test()</h3>
+    <script>
+        var patt = /e/;
+        var b = patt.test("The best things in life are free!");
+        document.write(b);
+    </script>
+    <h3>使用 exec()</h3>
+    <script>
+        var patt1=new RegExp("e");
+        var b = patt1.exec("The best things in life are free!");
+        document.write(b);
+    </script>
+    <h3><a href="https://www.runoob.com/jsref/jsref-obj-regexp.html">JavaScript ReGexp 教程</a></h3>
+</body>
+</html>

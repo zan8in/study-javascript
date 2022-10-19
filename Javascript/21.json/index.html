@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript JSON</h1>
+    <h2>字符串转JSON</h2>
+    <p>JSON.parse() 用于将一个 JSON 字符串转换为 JavaScript 对象</p>
+    <p id="demo1"></p><p id="demo2"></p>
+    <script>
+        var text = '{"sites":[{"name":"baidu.com","url":"http://baidu.com"},{"name":"ifeng.com","url":"http://ifeng.com"}]}';
+        document.getElementById("demo1").innerHTML = text;
+        jsontext = JSON.parse(text);
+        document.getElementById("demo2").innerHTML = jsontext.sites[0].name;
+    </script>
+    <h2>JSON对象转字符串</h2>
+    <p>JSON.stringify() 用于将 JavaScript 值转换为 JSON 字符串</p>
+    <p id="demo5"></p><p id="demo6"></p>
+    <script>
+        var obj = {"sites":[{"name":"baidu.com","url":"http://baidu.com"},{"name":"ifeng.com","url":"http://ifeng.com"}]};
+        document.getElementById("demo5").innerHTML = obj.sites[0].name;
+        var text = JSON.stringify(obj);
+        document.getElementById("demo6").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript 类型转换</h1>
+    <h3>JavaScript 中有 6 种不同的数据类型：</h3>
+    <ul>
+        <li>string</li>
+        <li>number</li>
+        <li>boolean</li>
+        <li>object</li>
+        <li>function</li>
+        <li>symbol</li>
+    </ul>
+    <h3>3 种对象类型</h3>
+    <ul>
+        <li>Object</li>
+        <li>Date</li>
+        <li>Array</li>
+    </ul>
+    <h3>2 个不包含任何值的数据类型</h3>
+    <ul>
+        <li>null</li>
+        <li>undefined</li>
+    </ul>
+    <h3>typeof 操作符</h3>
+    <p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = 
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof NaN + "<br>" +
+        typeof false + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof {name:'john', age:34} + "<br>" +
+        typeof new Date() + "<br>" +
+        typeof function () {} + "<br>" +
+        typeof myCar + "<br>" +
+        typeof null;
+    </script>
+
+    <h3>constructor 属性</h3>
+    <xmp>
+        "John".constructor                 // 返回函数 String()  { [native code] }
+        (3.14).constructor                 // 返回函数 Number()  { [native code] }
+        false.constructor                  // 返回函数 Boolean() { [native code] }
+        [1,2,3,4].constructor              // 返回函数 Array()   { [native code] }
+        {name:'John', age:34}.constructor  // 返回函数 Object()  { [native code] }
+        new Date().constructor             // 返回函数 Date()    { [native code] }
+        function () {}.constructor         // 返回函数 Function(){ [native code] }
+    </xmp>
+    <p> constructor 属性返回变量或对象的构造函数。</p>
+    <p id="demo2"></p>
+    <script>
+    document.getElementById("demo2").innerHTML = 
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1,2,3,4].constructor + "<br>" +
+        {name:'john', age:34}.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () {}.constructor;
+    </script>
+    <p>
+        你可以使用 constructor 属性来查看对象是否为数组 (包含字符串 "Array"):
+    </p>
+    <xmp>
+        function isArray(myArray) {
+            return myArray.constructor.toString().indexOf("Array") > -1;
+        }    
+    </xmp>
+
+    <p>你可以使用 constructor 属性来查看对象是否为日期 (包含字符串 "Date"):</p>
+    <xmp>
+        function isDate(myDate) {
+            return myDate.constructor.toString().indexOf("Date") > -1;
+        }
+    </xmp>
+
+    <h3>将数字转换为字符串</h3>
+    <h4>String()</h4>
+    <div id="demo3"></div>
+    <script>
+        var x = 123;
+        document.getElementById("demo3").innerHTML = 
+            String(x) + "<br>" +
+            String(123) + "<br>" +
+            String(100 + 20);
+    </script>
+    <h4>toString()</h4>
+    <div id="demo4"></div>
+    <script>
+        var x = 123;
+        document.getElementById("demo4").innerHTML = 
+            x.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (100 + 20).toString();
+    </script>
+    <h4>将布尔值转换为字符串</h4>
+    <p>
+        String(false)        // 返回 "false" <br>
+        String(true)         // 返回 "true" <br>
+        false.toString()     // 返回 "false" <br>
+        true.toString()      // 返回 "true"
+    </p>
+    <h4>将日期转换为字符串</h4>
+    <p>
+        Date()      // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time) <br>
+        String(new Date())      // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time) <br>
+        obj = new Date() <br>
+        obj.toString()   // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)
+    </p>
+
+    <h3>将字符串转换为数字</h3>
+    <p>
+        Number("3.14")    // 返回 3.14 <br>
+        Number(" ")       // 返回 0 <br>
+        Number("")        // 返回 0 <br>
+        Number("99 88")   // 返回 NaN <br>
+        parseFloat()	解析一个字符串，并返回一个浮点数。 <br>
+        parseInt()	解析一个字符串，并返回一个整数。 <br>
+        var y = "5"; var x = + y;  // Operator + 可用于将变量转换为数字 <br>
+        var y = "john"; var x = + y; // 如果转换失败，结果是 NaN
+    </p>
+
+</script>
+</body>
+</html>

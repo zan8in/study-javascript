@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型</title>
+</head>
+<body>
+    <h1>JavaScript 数据类型</h1>
+    <p>
+        值类型（基本类型）：字符串（string）、数字（Number）、布尔（Boolean）、空（NULL）、未定义（Undefined）、Symbol（ES6引入的原始数据类型，表示独一无二的值）
+    </p>
+    <p>
+        引用数据类型（对象类型）：对象（Object）、数组（Array）、函数（Function），还有两个特殊的对象：正则（RegExp）和日期（Date）
+    </p>
+    <h1>JavaScript 数字</h1>
+    <p>
+        var y=123e5;      // 12300000
+    </p>
+    <p>
+        var z=123e-5;     // 0.00123
+    </p>
+
+    <h1>undefined 和 Null</h1>
+    <p>undefined 这个值表示变量不含有值</p>
+    <p>可以通过将变量的值设置为 null 来清空变量</p>
+    <script>
+        var cars = "BMW";
+        var person = "tom";
+        console.log("cars=",cars,",person=",person);
+        cars = null
+        person = null
+        console.log("cars=",cars,",person=",person);
+    </script>
+
+    <h1>声明变量类型</h1>
+    <p>var carname = new String;</p>
+    <p>var x = new Number;</p>
+    <p>var y = new Boolean;</p>
+    <p>var cars = new Array;</p>
+    <p>var person = new Object;</p>
+</body>
+</html>

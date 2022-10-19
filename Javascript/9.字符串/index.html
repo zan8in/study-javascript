@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript 字符串</h1>
+    <h3>声明</h3>
+    <p>单引号/双引号</p>
+    <script>
+        var carname1 = "volvo";
+        var carname2 = 'volvo';
+    </script>
+
+    <h3>访问每个字符</h3>
+    <script>
+        console.log(carname1[0])
+    </script>
+
+    <h3>字符串长度</h3>
+    <script>
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var sln = txt.length;
+        console.log(sln)
+    </script>
+
+    <h3>特殊字符</h3>
+    <ul>
+        <li>\'   单引号</li>
+        <li>\“   双引号</li>
+        <li>\\   反斜线</li>
+        <li>\n   换行</li>
+        <li>\r   回车</li>
+        <li>\t   tab（制表符）</li>
+        <li>\b   退格符</li>
+        <li>\f   换页符</li>
+    </ul>
+
+    <h3>字符串属性和方法</h3>
+    <script>
+        var x1 = "hello";
+        console.log("x1.constructor: ", x1.constructor);
+        console.log("x1.length: ", x1.length);
+        console.log("x1.prototype: ", x1.prototype = carname1);
+        console.log(x1, x1.prototype);
+    </script>
+    <h3><a href="https://www.runoob.com/jsref/jsref-obj-string.html">更多字符串方法</a></h3>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript 异步</h1>
+    <h2>回调函数</h2>
+    <p>回调函数就是一个函数，它是在我们启动一个异步任务的时候就告诉它：等你完成了这个任务之后要干什么。这样一来主线程几乎不用关心异步任务的状态了，他自己会善始善终。</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        setTimeout(() => {
+            document.getElementById("demo1").innerHTML = "1111111111";
+        }, 3000);
+        document.getElementById("demo2").innerHTML = "2222222222";
+    </script>
+    <h2>异步 AJAX</h2>
+    <p id="demo3"></p>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            document.getElementById("demo3").innerHTML = xhr.responseText;
+        }
+        xhr.onerror = function() {
+            document.getElementById("demo3").innerHTML = "请求出错！" + xhr.responseText;
+        }
+        xhr.open("GET", "https://www.runoob.com/try/ajax/ajax_info.txt", true);
+        xhr.send();
+    </script>
+</body>
+</html>

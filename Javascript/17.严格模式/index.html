@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript 严格模式</h1>
+    <h1>使用 use strict 指令</h1>
+    <p>	"use strict" 指令只允许出现在脚本或函数的开头。</p>
+    <script>
+        "use strict";
+
+        x = 1.1;   // 报错 (x 未定义)
+
+        y = {p1:10, p2:20};  // 报错 (y 未定义)
+
+        delete x;   // 报错 （不允许删除变量或对象）
+
+        function xx(p1, p2) {}; 
+        delete xx;                // 报错 （不允许删除函数）
+
+        function x(p1, p1) {};   // 报错 （不允许变量重名）
+
+        var x1 = 010;    // 报错 （不允许使用八进制）
+    </script>
+    <h3><a href="https://www.runoob.com/js/js-strict.html">更多严格模式</a></h3>
+</body>
+</html>

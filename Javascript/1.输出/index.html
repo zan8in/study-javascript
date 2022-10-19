@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 输出</title>
+</head>
+<body>
+    <h1>使用 window.alert() 弹出警告框</h1>
+    <script>
+        window.alert(6*2);
+    </script>
+    
+    <h1>使用 document.write() 方法将内容写到 HTML 文档中</h1>
+    <h2>
+        <script>document.writeln("+ Writeln 写入日期：" + Date());</script>
+    </h2>
+
+    <h1>使用 innerHTML 写入到 HTML 元素</h1>
+    <h2 id="demo3"></h2>
+    <script>
+        document.getElementById("demo3").innerHTML = "+ innerHTML 写入 H2";
+    </script>
+
+    <button onclick="myFunction()">点我</button>
+    <h2 id="clickme"></h2>
+    <script>
+        function myFunction() {
+            document.getElementById("clickme").innerText = Date()
+        }
+    </script>
+
+    <h1>写到控制台</h1>
+    <script>
+        a = 5;
+        b = 6;
+        c = a + b;
+        console.log(c);
+    </script>
+
+    <h3>字符串换行</h3>
+    <script>
+        var x = "Hello \
+        \
+World!";
+        document.write(x);
+    </script>
+</body>
+</html>

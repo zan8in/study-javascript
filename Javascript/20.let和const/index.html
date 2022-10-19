@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript let 和 const</h1>
+    <h2>let 声明的全局变量不属于 windows 对象</h2>
+    <p>使用var关键字声明的全局作用域变量属于window对象<br>使用let关键字声明的全局作用域变量不属于window对象</p>
+    <p id="demo1"></p><p id="demo2"></p>
+    <script>
+        let x = "x";
+        var y = "y";
+        document.getElementById("demo1").innerHTML = "let x = " + window.x;
+        document.getElementById("demo2").innerHTML = "var y = " + window.y;
+    </script>
+    <h2>let关键字在不同作用域，或不用块级作用域中是可以重新声明赋值的</h2>
+    <p>let关键字定义的变量需要先声明再使用</p>
+    <p id="demo3"></p>
+    <script>
+        let xx = "xx";
+        a: {
+            let xx = "xx2";
+        }
+        document.getElementById("demo3").innerHTML = xx;
+    </script>
+    <h2>const关键字定义的常量，声明时必须进行初始化，且初始化后不可再修改</h2>
+    <p id="demo5"></p>
+    <script>
+        const a = "a";
+        document.getElementById("demo5").innerHTML = a;
+    </script>
+    <h2>const 关键字在不同作用域，或不同块级作用域中是可以重新声明赋值的</h2>
+    <p id="demo6"></p><p id="demo7"></p>
+    <script>
+        const b = {"a":"ccc","b":"cc2"};
+        document.getElementById("demo6").innerHTML = b.a;
+        b.a = "ddd";
+        document.getElementById("demo7").innerHTML = b.a;
+    </script>
+</body>
+</html>

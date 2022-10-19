@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 语法</title>
+</head>
+<body>
+    <h1>JavaScript 字面量</h1>
+    在编程语言中，一般固定值称为字面量，如 3.14。
+    <h1>数字（Number）字面量 可以是整数或者是小数，或者是科学计数(e)</h1>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "科学计数法 123e5 = " + 123e5;        
+    </script>
+    
+    <h1>字符串（String）字面量 可以使用单引号或双引号</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = '\'John Wick\'';    
+        document.getElementById("demo2").innerHTML = "\"John Wick\"";      
+    </script>
+
+    <h1>表达式字面量 用于计算</h1>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = '3 + 5 = ' + (3 + 5);    
+    </script>
+
+    <h1>数组（Array）字面量</h1>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        arr = [50,100,1,5,25,10]   
+        document.getElementById("demo4").innerHTML = "array = " + arr;
+        document.getElementById("demo5").innerHTML = "array[1] = " + arr[1];
+    </script>
+
+    <h1>对象（Object）字面量 定义一个对象</h1>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        obj = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}  
+        document.getElementById("demo6").innerHTML = "object = " + obj;
+        document.getElementById("demo7").innerHTML = "object.eyeColor = " + obj.eyeColor;
+    </script>
+
+    <h1>函数（Function）字面量 定义一个函数</h1>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        function myFunction(a, b) { return a * b;}
+        document.getElementById("demo8").innerHTML = "function = " + myFunction;
+        document.getElementById("demo9").innerHTML = "myFunction(3,6) = " + myFunction(3,6);
+    </script>
+
+    <h1>JavaScript 变量</h1>
+    JavaScript 使用关键字 var 来定义变量
+    <p id="demo10"></p>
+    <script>
+        var length;
+        length = 6;
+        document.getElementById("demo10").innerHTML = length;
+    </script>
+
+    <h1>运算符</h1>
+    <p>
+        赋值，算术和位运算符 (=  +  -  *  /) <br>
+        条件，比较及逻辑运算符 (==  != <  >)
+    </p>
+
+    <h1>JavaScript 语句用分号 ; 隔开</h1>
+
+    <h1>JavaScript 关键字</h1>
+    <table>
+        <tr>
+            <td>abstract</td><td>else</td><td>instanceof</td><td>super</td>
+            <tr>
+            <td>boolean</td><td>enum</td><td>int</td><td>switch</td></tr>
+            <tr><td>break</td><td>export</td><td>interface</td><td>synchronized</td></tr>
+            <tr><td>byte</td><td>extends</td><td>let</td><td>this</td></tr>
+            <tr><td>case</td><td>false</td><td>long</td><td>throw</td></tr>
+            <tr><td>catch</td><td>final</td><td>native</td><td>throws</td></tr>
+            <tr><td>char</td><td>finally</td><td>new</td><td>transient</td></tr>
+            <tr><td>class</td><td>float</td><td>null</td><td>true</td></tr>
+            <tr><td>const</td><td>for</td><td>package</td><td>try</td></tr>
+            <tr><td>continue</td><td>function</td><td>private</td><td>typeof</td></tr>
+            <tr><td>debugger</td><td>goto</td><td>protected</td><td>var</td></tr>
+            <tr><td>default</td><td>if</td><td>public</td><td>void</td></tr>
+            <tr><td>delete</td><td>implements</td><td>return</td><td>volatile</td></tr>
+            <tr><td>do</td><td>import</td><td>short</td><td>while</td></tr>
+            <tr><td>double</td><td>in</td><td>static</td><td>with</td>
+        </tr>
+    </table>
+
+    <h1>JavaScript 注释</h1>
+    <p> // 这是注释</p>
+
+    <h1>JavaScript 数据类型</h1>
+    <p>
+        var length = 16;   // 数字
+        var points = x * 10;   // 表达式
+        var lastName = "Johnson";  // 字符串
+        var cars = ["Saab", "Volvo", "BMW"];  // 数组
+        var person = {firstName: "John", lastName: "Doe"};  // 对象
+    </p>
+
+    <h1>JavaScript 函数</h1>
+    <p>
+        function myFunction(a, b) {
+            return a + b;
+        }
+    </p>
+
+    <h1>JavaScript 字母大小写敏感</h1>
+</body>
+</html>
